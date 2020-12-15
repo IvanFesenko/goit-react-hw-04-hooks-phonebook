@@ -1,6 +1,6 @@
 import styles from './Filter.module.css';
 
-function Filter({ filter, onChangeFilter = () => {} }) {
+function Filter({ filter, onChangeFilter }) {
   return (
     <div className={styles.container}>
       <label>
