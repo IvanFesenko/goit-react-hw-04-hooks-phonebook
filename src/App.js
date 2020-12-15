@@ -27,7 +27,12 @@ function App() {
     }
     if (isUniqueContact(name)) {
       const newContact = { id: uid(), name, number };
-      setContacts([...contacts, newContact]);
+      const sortedContacts = [...contacts, newContact].sort((a, b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
+        return 1;
+      });
+      setContacts(sortedContacts);
     } else {
       alert(`${name} is already in contacts`);
     }
