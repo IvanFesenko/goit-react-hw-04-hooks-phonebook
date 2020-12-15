@@ -1,0 +1,55 @@
+.list {
+  max-width: 345px;
+}
+
+.block {
+  display: block;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  .wrap {
+    margin: 0;
+    width: 80%;
+  }
+
+  .name {
+    @extend .block;
+    font-size: 20px;
+  }
+
+  .phone {
+    @extend .block;
+    text-align: end;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 5px;
+
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-color: #9ecaed;
+  color: #e22222;
+  box-shadow: 0 0 40px 40px #9ecaed inset, 0 0 0 0 #9ecaed;
+  transition: all 150ms ease-in-out;
+
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 3px 0 #e22222 inset, 0 0 20px 4px #e22222;
+    outline: 0;
+    border-color: #320606;
+  }
+}
